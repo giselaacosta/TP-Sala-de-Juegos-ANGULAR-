@@ -1,36 +1,19 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-<<<<<<< HEAD
-=======
-    "downlevelIteration": true,
-    "importHelpers": true,
->>>>>>> ccad3af3725d8b1b1de2091d207eb4e9c9baa149
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-<<<<<<< HEAD
     "target": "es5",
-=======
-    "target": "es2015",
->>>>>>> ccad3af3725d8b1b1de2091d207eb4e9c9baa149
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
       "es2017",
       "dom"
-<<<<<<< HEAD
     ]
   }
 }
-=======
-    ],
-    "module": "es2020",
-    "baseUrl": "./"
-  }
-}
->>>>>>> ccad3af3725d8b1b1de2091d207eb4e9c9baa149
