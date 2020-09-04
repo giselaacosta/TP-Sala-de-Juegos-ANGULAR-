@@ -13,9 +13,17 @@
     "curly": true,
     "eofline": true,
     "forin": true,
+<<<<<<< HEAD
     "import-blacklist": [
       true,
       "rxjs"
+=======
+    "deprecation": {
+      "severity": "warning"
+    },
+    "import-blacklist": [
+      true
+>>>>>>> ccad3af3725d8b1b1de2091d207eb4e9c9baa149
     ],
     "import-spacing": true,
     "indent": [
@@ -69,7 +77,10 @@
     "no-trailing-whitespace": true,
     "no-unnecessary-initializer": true,
     "no-unused-expression": true,
+<<<<<<< HEAD
     "no-use-before-declare": true,
+=======
+>>>>>>> ccad3af3725d8b1b1de2091d207eb4e9c9baa149
     "no-var-keyword": true,
     "object-literal-sort-keys": false,
     "one-line": [
@@ -126,12 +137,21 @@
       "app",
       "kebab-case"
     ],
+<<<<<<< HEAD
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
     "no-input-rename": true,
     "no-output-rename": true,
     "use-life-cycle-interface": true,
+=======
+    "no-inputs-metadata-property": true,
+    "no-outputs-metadata-property": true,
+    "no-host-metadata-property": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+    "use-lifecycle-interface": true,
+>>>>>>> ccad3af3725d8b1b1de2091d207eb4e9c9baa149
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
     "directive-class-suffix": true,

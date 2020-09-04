@@ -39,7 +39,10 @@
 
 /** Evergreen browsers require these. **/
 import 'core-js/es6/reflect';
+<<<<<<< HEAD
 import 'core-js/es7/reflect';
+=======
+>>>>>>> ccad3af3725d8b1b1de2091d207eb4e9c9baa149
 
 
 /**
