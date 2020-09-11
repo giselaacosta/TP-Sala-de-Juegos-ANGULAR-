@@ -7,7 +7,7 @@ import { Component, OnInit ,Input,Output,EventEmitter} from '@angular/core';
   templateUrl: './adivina-el-numero.component.html',
   styleUrls: ['./adivina-el-numero.component.css']
 })
-export class AdivinaElNumeroComponent 
+export class AdivinaElNumeroComponent {
 //implements OnInit {
 //  @Output() enviarJuego: EventEmitter<any>= new EventEmitter<any>();
 
