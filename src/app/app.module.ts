@@ -56,6 +56,7 @@ import { InputJugadoresComponent } from './componentes/input-jugadores/input-jug
 import { SexoPipe } from './pipes/sexo.pipe';
 import { MemotestComponent } from './componentes/memotest/memotest.component';
 import { TatetiComponent } from './componentes/tateti/tateti.component';
+import { PiedrapapeltijeraComponent } from './componentes/piedrapapeltijera/piedrapapeltijera.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { TatetiComponent } from './componentes/tateti/tateti.component';
     InputJugadoresComponent,
     SexoPipe,
     MemotestComponent,
-    TatetiComponent 
+    TatetiComponent,
+    PiedrapapeltijeraComponent 
   ],
   imports: [
     BrowserModule,
