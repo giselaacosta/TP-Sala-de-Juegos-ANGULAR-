@@ -25,6 +25,7 @@ import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 import { JugadorDetalleComponent } from '../componentes/jugador-detalle/jugador-detalle.component';
 import { PiedrapapeltijeraComponent } from '../componentes/piedrapapeltijera/piedrapapeltijera.component';
 import { TatetiComponent } from '../componentes/tateti/tateti.component';
+import { MemotestComponent } from '../componentes/memotest/memotest.component';
 
 
 // declaro donde quiero que se dirija
@@ -46,9 +47,11 @@ children:
      {path: 'Adivina' , component: AdivinaElNumeroComponent},
 
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
-      {path: 'Anagrama' , component: AnagramaComponent}
+      {path: 'Anagrama' , component: AnagramaComponent},
       {path: 'Tateti' , component: TatetiComponent},
       {path: 'PPT' , component: PiedrapapeltijeraComponent},
+      {path: 'Memotest' , component: MemotestComponent}
+
     ]
 },
 {path: '**' , component: ErrorComponent},

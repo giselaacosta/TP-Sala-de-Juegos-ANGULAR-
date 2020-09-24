@@ -26,19 +26,6 @@ import { AgilidadMasListadoComponent } from './componentes/agilidad-mas-listado/
 import { RuteandoModule } from './ruteando/ruteando.module';
 import { ListadoComponent } from './componentes/listado/listado.component';
 
-// declaro donde quiero que se dirija
-/*
-const MiRuteo = [{path: 'error' , component: ErrorComponent},
-{path: 'Login' , component: LoginComponent},
-{path: 'Principal' , component: PrincipalComponent , pathMatch: 'full'},
-{path: 'Adivina' , component: AdivinaElNumeroComponent},
-{path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
-{path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
-{path: 'Agilidad' , component: AgilidadAritmeticaComponent},
-{path: '' , component: LoginComponent , pathMatch: 'full'},
-
-{path: '**' , component: ErrorComponent} ];
-*/
 import { JugadoresListadoComponent } from './componentes/jugadores-listado/jugadores-listado.component';
 
 import { JuegoServiceService } from './servicios/juego-service.service';
@@ -58,6 +45,17 @@ import { MemotestComponent } from './componentes/memotest/memotest.component';
 import { TatetiComponent } from './componentes/tateti/tateti.component';
 import { PiedrapapeltijeraComponent } from './componentes/piedrapapeltijera/piedrapapeltijera.component';
 import { JugadorDetalleComponent } from './componentes/jugador-detalle/jugador-detalle.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { CronometroComponent } from './componentes/cronometro/cronometro.component';
+import { TableroComponent } from './componentes/tablero/tablero.component';
+
+import { TarjetaService } from './componentes/servicios/tarjeta.service';
+import { TarjetaComponent } from './componentes/tarjeta/tarjeta.component';
+import { TableroService } from './componentes/servicios/tablero.service';
+
 
 @NgModule({
   declarations: [
@@ -87,13 +85,17 @@ import { JugadorDetalleComponent } from './componentes/jugador-detalle/jugador-d
     MemotestComponent,
     TatetiComponent,
     PiedrapapeltijeraComponent ,
-    JugadorDetalleComponent
+    JugadorDetalleComponent,
+    CronometroComponent,
+    TableroComponent,
+    TarjetaComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RuteandoModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })
@@ -102,7 +104,8 @@ import { JugadorDetalleComponent } from './componentes/jugador-detalle/jugador-d
     // importo el ruteo
     // RouterModule.forRoot(MiRuteo)
   ],
-  providers: [ JuegoServiceService, MiHttpService,PaisesService,ArchivosJugadoresService,JugadoresService],
+  providers: [ JuegoServiceService, MiHttpService,PaisesService,ArchivosJugadoresService,JugadoresService,  TarjetaService,
+    TableroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
