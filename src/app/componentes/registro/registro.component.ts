@@ -1,22 +1,44 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-//para poder hacer las validaciones
-//import { Validators, FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
+import { AuthService } from '../../auth/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
-  styleUrls: ['./registro.component.css']
+  styleUrls: ['./registro.component.css'],
+  providers:[AuthService]
 })
 export class RegistroComponent implements OnInit {
 
- /* constructor( private miConstructor:FormBuilder) { }
-  email=new FormControl('',[Validators.email]);
-  formRegistro:FormGroup=this.miConstructor.group({
-    usuario:this.email
-  });*/
-  constructor( ) { }
+  registerForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
 
-  ngOnInit() {
+
+  constructor(private authSvc: AuthService,private router: Router) { }
+
+  ngOnInit(): void {
+  }
+ 
+
+  async onRegister() {
+    const { email, password } = this.registerForm.value;
+    try {
+      const user = await this.authSvc.register(email, password);
+      if (user) {
+        this.router.navigate(['/principal'])     
+      }
+       else
+       {
+         this.router.navigate(['error'])  
+
+       }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
+
 }
+
