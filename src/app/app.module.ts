@@ -16,6 +16,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ErrorComponent } from './componentes/error/error.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
+import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
     RegistroComponent,
     PrincipalComponent,
     ErrorComponent,
-    CabeceraComponent
+    CabeceraComponent,
+    QuienSoyComponent
  
   ],
   imports: [
