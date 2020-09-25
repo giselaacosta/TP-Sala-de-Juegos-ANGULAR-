@@ -4,6 +4,7 @@ import { LoginComponent } from "./componentes/login/login.component";
 import { PrincipalComponent } from "./componentes/principal/principal.component";
 import { ErrorComponent } from "./componentes/error/error.component";
 import { RegistroComponent } from "./componentes/registro/registro.component";
+import { CabeceraComponent } from "./componentes/cabecera/cabecera.component";
 
 import { RouterModule } from "@angular/router";
 
@@ -19,6 +20,7 @@ const appRoutes = [
 
 { path: "registro", component: RegistroComponent, pathMatch: "full" },
 { path: "error", component: ErrorComponent, pathMatch: "full" },
+{ path: "cabecera", component: CabeceraComponent, pathMatch: "full" }
 
 ];
 export const routing = RouterModule.forRoot(appRoutes);

@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ErrorComponent } from './componentes/error/error.component';
+import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ErrorComponent } from './componentes/error/error.component';
     RegistroComponent,
     PrincipalComponent,
     ErrorComponent,
+    CabeceraComponent
  
   ],
   imports: [
