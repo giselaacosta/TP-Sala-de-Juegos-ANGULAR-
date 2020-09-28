@@ -27,11 +27,11 @@ export class RegistroComponent implements OnInit {
     try {
       const user = await this.authSvc.register(email, password);
       if (user) {
-        this.router.navigate(['/principal'])     
+        this.router.navigate(['Principal'])     
       }
        else
        {
-         this.router.navigate(['error'])  
+         this.router.navigate(['Error'])  
 
        }
     } catch (error) {

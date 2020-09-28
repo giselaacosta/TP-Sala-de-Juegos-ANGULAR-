@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ArchivosJugadoresService } from './archivos-jugadores.service';
 
 import { HttpClient } from '@angular/common/http';
 import { Jugador } from '../clases/jugador';

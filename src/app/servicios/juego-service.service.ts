@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Juego } from '../clases/juego';
+import { JuegoAdivina } from '../clases/juego-adivina';
+import { MiHttpService } from './mi-http/mi-http.service';
 
 import { environment } from '../../environments/environment';
-
+import { JuegoAnagrama } from '../clases/juego-anagrama';
+import { JuegoAgilidad } from '../clases/juego-agilidad';
+import { JuegoPiedraPapelTijera } from '../clases/juego-piedra-papel-tijera';
 import { HttpClient } from '@angular/common/http';
 import * as firebase from 'firebase';
 

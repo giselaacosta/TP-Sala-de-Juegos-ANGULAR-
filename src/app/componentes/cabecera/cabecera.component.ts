@@ -8,17 +8,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./cabecera.component.css']
 })
 export class CabeceraComponent implements OnInit {
-  /* public sesionIniciada: boolean;*/
+  public sesionIniciada: boolean;
 
-  constructor(
-  //  private servicioJugadores: JugadoresService
-    ) { }
+  constructor(private servicioJugadores: JugadoresService) { }
 
   ngOnInit() {
-   // this.checkSesion();
+    this.checkSesion();
   }
 
- /* checkSesion(){
+  checkSesion(){
     if(JSON.parse(localStorage.getItem('jugadorActual')).nombre)
     {
       this.sesionIniciada = true;
@@ -32,6 +30,6 @@ export class CabeceraComponent implements OnInit {
   {
     this.servicioJugadores.cerrarSesion();
     this.sesionIniciada = false;
-  } */
+  }
 
 }

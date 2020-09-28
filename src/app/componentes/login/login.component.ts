@@ -26,11 +26,11 @@ export class LoginComponent implements OnInit {
       const user = await this.authSvc.login(email, password);
       if (user) {
 
-this.router.navigate(['principal'])     
+this.router.navigate(['/Principal'])     
  }
    else
  {
-  this.router.navigate(['error'])  
+  this.router.navigate(['/Error'])  
  } 
     } catch (error) {
       console.log(error);

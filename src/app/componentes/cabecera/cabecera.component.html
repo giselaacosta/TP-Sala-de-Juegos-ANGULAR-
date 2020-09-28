@@ -1,1 +1,22 @@
+<div class="panel panel-default">
+  <div class="hero-text">
+      <h1 style="font-size:75px">Sala de Juegos</h1>
+      <p>Gisela Acosta</p>
+      <a href="https://github.com/giselaacosta"target="_blank">en GitHub <i class="fa fa-github"></i></a>
+      <a  routerLink="/QuienSoy" >Quien Soy? <i class="fa fa-user"></i></a>
+  </div>
+  <ul class="nav navbar-nav navbar-right">
+    <div *ngIf='!sesionIniciada'>
+      <li><a routerLink="/Registro">
+          <button type="button" name="btnRegistrar" class="btn btn-secondary">
+            <i class="fa fa-user"></i> Registrarse</button></a></li>
+      <li><a  routerLink="/Login">
+          <button type="button" name="btnIngresar" class="btn btn-secondary">
+            <i class="fa fa-user"></i> Ingresar</button></a></li>
+    </div>    
+    <div *ngIf='sesionIniciada'>
+      <button type="button" name="btnIngresar" class="btn btn-secondary" (click)='cerrarSesion()'>Salir</button>
+    </div>
+</ul>
 
+</div>
