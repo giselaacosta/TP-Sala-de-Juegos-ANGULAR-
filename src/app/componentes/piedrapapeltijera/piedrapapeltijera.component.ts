@@ -22,9 +22,9 @@ export class PiedrapapeltijeraComponent implements OnInit {
     //          private juegoServicio: JuegoServiceService
              ) {
     // this.jugador = this.miJugadoresServicio.traerActual();
-     this.nuevoJuego = new JuegoPiedraPapelTijera();
-     this.nuevoJuego.jugador = this.jugador.nombre;
-     this.empate = false;
+    //  this.nuevoJuego = new JuegoPiedraPapelTijera();
+    //  this.nuevoJuego.jugador = this.jugador.nombre;
+    //  this.empate = false;
      //this.nuevoJuego.jugador = this.jugador.nombre;
      console.info("Inicio piedra, papel o tijera");
    }

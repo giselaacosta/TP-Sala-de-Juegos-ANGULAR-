@@ -1,3 +1,8 @@
+
+@use "@material/list";
+
+@include list.core-styles;
+
 .imagenDeMenu{
   width: 100px;
   height: 100%;
@@ -21,11 +26,22 @@ a:hover {
   color: black;
 }
 
-.panel
+/* .panel
 {
     background-image: url("/assets/imagenes/background.png");
     background-color: #1a1a1a;
     background-size: cover;
     width: 100%;
+} */
+
+.my-image-list {
+  @include image-list.standard-columns(5);
 }
+
+@media (max-width: 50px) {
+  .my-image-list {
+    @include image-list.standard-columns(3);
+  }
+}
+
 

@@ -26,10 +26,10 @@ export class AnagramaComponent implements OnInit {
 
   ngOnInit() {
    // this.jugador = this.miJugadoresServicio.traerActual();
-    this.nuevoJuego = new JuegoAnagrama();
-    this.nuevoJuego.jugador = this.jugador.nombre;
-    this.finJuego = false;
-    this.ocultarVerificar = false;
+    // this.nuevoJuego = new JuegoAnagrama();
+    // this.nuevoJuego.jugador = this.jugador.nombre;
+    // this.finJuego = false;
+    // this.ocultarVerificar = false;
 
   }
 

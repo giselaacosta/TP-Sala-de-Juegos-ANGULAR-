@@ -30,10 +30,10 @@ export class AgilidadAritmeticaComponent implements OnInit {
     // private miJugadoresServicio: JugadoresService, 
     //           private juegoService: JuegoServiceService
               ) {
-    this.ocultarVerificar=true;
-    this.Tiempo = 20;
-    this.nuevoJuego = new JuegoAgilidad();
-    console.info("Inicio agilidad");
+    // this.ocultarVerificar=true;
+    // this.Tiempo = 20;
+    // this.nuevoJuego = new JuegoAgilidad();
+    // console.info("Inicio agilidad");
   }
 
   ngOnInit() {
