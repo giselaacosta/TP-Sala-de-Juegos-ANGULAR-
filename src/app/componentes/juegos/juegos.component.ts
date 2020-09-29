@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JugadoresService } from '../../servicios/jugadores.service';
+//import { JugadoresService } from '../../servicios/jugadores.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,25 +10,27 @@ import { Router } from '@angular/router';
 export class JuegosComponent implements OnInit {
   public jugadorLogueado: Boolean;
 
-  constructor(private servicioJugadores: JugadoresService, private router: Router) { }
+  constructor(
+    //private servicioJugadores: JugadoresService, 
+    private router: Router) { }
 
   ngOnInit() {
-    this.validarJugador();
-    if(!this.jugadorLogueado){
-      this.router.navigate(['/Login']);
-    }
+    // //this.validarJugador();
+    // if(!this.jugadorLogueado){
+    //   this.router.navigate(['/Login']);
+    // }
   }
 
-  validarJugador()
-  {    
-    if(this.servicioJugadores.traerActual())
-    {
-      this.jugadorLogueado = true;
-    }
-    else
-    {
-      this.jugadorLogueado = false;
-    }
-  }
+  // validarJugador()
+  // {    
+  //   if(this.servicioJugadores.traerActual())
+  //   {
+  //     this.jugadorLogueado = true;
+  //   }
+  //   else
+  //   {
+  //     this.jugadorLogueado = false;
+  //   }
+  // }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JugadoresService } from '../../servicios/jugadores.service';
+//import { JugadoresService } from '../../servicios/jugadores.service';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -10,10 +10,12 @@ import { HttpClient } from '@angular/common/http';
 export class CabeceraComponent implements OnInit {
   public sesionIniciada: boolean;
 
-  constructor(private servicioJugadores: JugadoresService) { }
+  constructor(
+    //private servicioJugadores: JugadoresService
+    ) { }
 
   ngOnInit() {
-    this.checkSesion();
+    //this.checkSesion();
   }
 
   checkSesion(){
@@ -28,7 +30,7 @@ export class CabeceraComponent implements OnInit {
 
   cerrarSesion()
   {
-    this.servicioJugadores.cerrarSesion();
+   // this.servicioJugadores.cerrarSesion();
     this.sesionIniciada = false;
   }
 

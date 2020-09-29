@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
+//import 'rxjs/add/operator/switchMap';
 @Component({
   selector: 'app-error',
   templateUrl: './error.component.html',
@@ -8,13 +7,10 @@ import { Router } from '@angular/router';
 })
 export class ErrorComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
-  ngOnInit(): void {
-  }
-  async Salir() {
+  ngOnInit() {
    
-
-this.router.navigate(['login'])     
   }
+
 }

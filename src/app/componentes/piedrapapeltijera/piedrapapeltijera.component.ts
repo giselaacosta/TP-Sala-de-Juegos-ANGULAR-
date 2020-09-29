@@ -1,8 +1,8 @@
 import { Component, OnInit, EventEmitter, Input,Output } from '@angular/core';
 import { JuegoPiedraPapelTijera } from '../../clases/juego-piedra-papel-tijera';
 import { Jugador } from '../../clases/jugador';
-import { JugadoresService } from '../../servicios/jugadores.service';
-import { JuegoServiceService } from '../../servicios/juego-service.service';
+// import { JugadoresService } from '../../servicios/jugadores.service';
+// import { JuegoServiceService } from '../../servicios/juego-service.service';
 @Component({
   selector: 'app-piedrapapeltijera',
   templateUrl: './piedrapapeltijera.component.html',
@@ -17,9 +17,11 @@ export class PiedrapapeltijeraComponent implements OnInit {
    jugador: Jugador; 
    empate: Boolean;
  
-   constructor(private miJugadoresServicio: JugadoresService, 
-             private juegoServicio: JuegoServiceService) {
-     this.jugador = this.miJugadoresServicio.traerActual();
+   constructor(
+    //  private miJugadoresServicio: JugadoresService, 
+    //          private juegoServicio: JuegoServiceService
+             ) {
+    // this.jugador = this.miJugadoresServicio.traerActual();
      this.nuevoJuego = new JuegoPiedraPapelTijera();
      this.nuevoJuego.jugador = this.jugador.nombre;
      this.empate = false;
@@ -54,8 +56,8 @@ export class PiedrapapeltijeraComponent implements OnInit {
        this.jugador.perdidos++;
        this.nuevoJuego.gano = false;
      }
-     this.miJugadoresServicio.actualizarActual(this.jugador); 
-     this.juegoServicio.crear(this.nuevoJuego);
+     //this.miJugadoresServicio.actualizarActual(this.jugador); 
+    // this.juegoServicio.crear(this.nuevoJuego);
      this.finJuego = true;
    }
  

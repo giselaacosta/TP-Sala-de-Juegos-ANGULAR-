@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { JuegoTateti, Ficha, Ganador } from '../../clases/juego-tateti';
 import { Jugador } from '../../clases/jugador';
-import { JugadoresService } from '../../servicios/jugadores.service';
-import { JuegoServiceService } from '../../servicios/juego-service.service';
+// import { JugadoresService } from '../../servicios/jugadores.service';
+// import { JuegoServiceService } from '../../servicios/juego-service.service';
 @Component({
   selector: 'app-tateti',
   templateUrl: './tateti.component.html',
@@ -24,15 +24,17 @@ export class TatetiComponent implements OnInit {
             [Ficha.vacio,Ficha.vacio,Ficha.vacio]
         ];
 
-  constructor(private servicioJugadores: JugadoresService, 
-    private juegoService: JuegoServiceService) {
+  constructor(
+    //private servicioJugadores: JugadoresService, 
+    //private juegoService: JuegoServiceService
+    ) {
       console.log("Constructor tateti");
       this.inicio = true;
       // state('vacio', style());
      }
 
   ngOnInit(): void {
-    this.jugador = this.servicioJugadores.traerActual();
+  //  this.jugador = this.servicioJugadores.traerActual();
     this.nuevoJuego = new JuegoTateti();
     this.nuevoJuego.jugador = this.jugador.nombre;
     this.nuevoJuego.ganador = Ganador.vacio;
@@ -110,8 +112,8 @@ export class TatetiComponent implements OnInit {
   }
 
   actualizarDatos(){
-    this.juegoService.crear(this.nuevoJuego);
-    this.servicioJugadores.actualizarActual(this.jugador);
+   // this.juegoService.crear(this.nuevoJuego);
+   // this.servicioJugadores.actualizarActual(this.jugador);
   }
 }
 

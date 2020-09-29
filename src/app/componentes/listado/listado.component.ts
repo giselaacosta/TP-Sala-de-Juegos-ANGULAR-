@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JuegoServiceService } from '../../servicios/juego-service.service';
+//import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 @Component({
   selector: 'app-listado',
@@ -9,7 +9,9 @@ import { JuegoServiceService } from '../../servicios/juego-service.service';
 export class ListadoComponent implements OnInit {
   public listadoParaCompartir: Array<any>;
 
-  constructor(private juegoService:JuegoServiceService) {
+  constructor(
+    //private juegoService:JuegoServiceService
+    ) {
     
   }
   
@@ -18,16 +20,16 @@ export class ListadoComponent implements OnInit {
   }
 
   traerTodos() {
-    this.listadoParaCompartir = this.juegoService.traerLocal(); 
+    //this.listadoParaCompartir = this.juegoService.traerLocal(); 
   }
 
   traerGanados(){
-    this.listadoParaCompartir = this.juegoService.traerLocal().filter((juego) => juego.gano);
+   // this.listadoParaCompartir = this.juegoService.traerLocal().filter((juego) => juego.gano);
   }
 
   traerPerdidos()
   {
-    this.listadoParaCompartir = this.juegoService.traerLocal().filter((juego) => !juego.gano);
+   // this.listadoParaCompartir = this.juegoService.traerLocal().filter((juego) => !juego.gano);
   }
 
 }
