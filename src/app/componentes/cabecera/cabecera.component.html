@@ -6,13 +6,15 @@
       <a  routerLink="/QuienSoy" >Quien Soy? <i class="fa fa-user"></i></a>
   </div>
   <ul class="nav navbar-nav navbar-right">
-    <div *ngIf='!sesionIniciada'>
+    <div *ngIf='!sesionIniciada' class="mdc-touch-target-wrapper">
       <li><a routerLink="/Registro">
-          <button type="button" name="btnRegistrar" class="btn btn-secondary">
-            <i class="fa fa-user"></i> Registrarse</button></a></li>
+        <div>
+          <button class="button">Registrarse</button>
+                </div>
+          </a></li>
       <li><a  routerLink="/Login">
-          <button type="button" name="btnIngresar" class="btn btn-secondary">
-            <i class="fa fa-user"></i> Ingresar</button></a></li>
+          <button type="button" name="btnIngresar" class="button">
+            Ingresar</button></a></li>
     </div>    
     <div *ngIf='sesionIniciada'>
       <button type="button" name="btnIngresar" class="btn btn-secondary" (click)='cerrarSesion()'>Salir</button>
